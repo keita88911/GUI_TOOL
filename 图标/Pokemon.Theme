@@ -1,0 +1,152 @@
+[CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_025pika.ico,0
+
+[CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\DefaultIcon]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_007zeni.ico,0
+
+[CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon]
+full=%ThemeDir%Pokemon\Pokemon_143kabi.ico,0
+empty=%ThemeDir%Pokemon\Pokemon_151mew.ico,0
+
+[Control Panel\Cursors]
+Arrow=%ThemeDir%Pokemon\Pokemon_arrow.cur
+Help=%ThemeDir%Pokemon\Pokemon_Help.cur
+AppStarting=%ThemeDir%Pokemon\Pokemon_wait.ani
+Wait=%ThemeDir%Pokemon\Pokemon_busy.ani
+NWPen=%ThemeDir%Pokemon\Pokemon_pen.cur
+No=%ThemeDir%Pokemon\Pokemon_stop.cur
+SizeNS=%ThemeDir%Pokemon\Pokemon_NS.cur
+SizeWE=%ThemeDir%Pokemon\Pokemon_ew.cur
+Crosshair=%ThemeDir%Pokemon\Pokemon_cross.cur
+IBeam=%ThemeDir%Pokemon\Pokemon_beam.cur
+SizeNWSE=%ThemeDir%Pokemon\Pokemon_nwse.cur
+SizeNESW=%ThemeDir%Pokemon\Pokemon_nesw.cur
+SizeAll=%ThemeDir%Pokemon\Pokemon_Move.cur
+UpArrow=%ThemeDir%Pokemon\Pokemon_Up.cur
+DefaultValue=
+
+[Control Panel\Desktop]
+Wallpaper=%ThemeDir%POKEMON\Pokemon Wallpaper.jpg
+Pattern=(None)
+TileWallpaper=0
+WallpaperStyle=2
+
+[AppEvents\Schemes\Apps\.Default\.Default\.Current]
+DefaultValue=
+
+[AppEvents\Schemes\Apps\.Default\AppGPFault\.Current]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_Error.wav
+
+[AppEvents\Schemes\Apps\.Default\Maximize\.Current]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_Maximize.wav
+
+[AppEvents\Schemes\Apps\.Default\MenuCommand\.Current]
+DefaultValue=
+
+[AppEvents\Schemes\Apps\.Default\MenuPopup\.Current]
+DefaultValue=
+
+[AppEvents\Schemes\Apps\.Default\Minimize\.Current]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_Minimize.wav
+
+[AppEvents\Schemes\Apps\.Default\Open\.Current]
+DefaultValue=
+
+[AppEvents\Schemes\Apps\.Default\Close\.Current]
+DefaultValue=
+
+[AppEvents\Schemes\Apps\.Default\RestoreDown\.Current]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_Minimize.wav
+
+[AppEvents\Schemes\Apps\.Default\RestoreUp\.Current]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_Maximize.wav
+
+[AppEvents\Schemes\Apps\.Default\RingIn\.Current]
+DefaultValue=
+
+[AppEvents\Schemes\Apps\.Default\Ringout\.Current]
+DefaultValue=
+
+[AppEvents\Schemes\Apps\.Default\SystemAsterisk\.Current]
+DefaultValue=
+
+[AppEvents\Schemes\Apps\.Default\SystemDefault\.Current]
+DefaultValue=
+
+[AppEvents\Schemes\Apps\.Default\SystemExclamation\.Current]
+DefaultValue=
+
+[AppEvents\Schemes\Apps\.Default\SystemExit\.Current]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_Exit.wav
+
+[AppEvents\Schemes\Apps\.Default\SystemHand\.Current]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_Error.wav
+
+[AppEvents\Schemes\Apps\.Default\SystemQuestion\.Current]
+DefaultValue=
+
+[AppEvents\Schemes\Apps\.Default\SystemStart\.Current]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_Start.wav
+
+[AppEvents\Schemes\Apps\Explorer\EmptyRecycleBin\.Current]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_bin.wav
+
+[Metrics]
+IconMetrics=76 0 0 0 75 0 0 0 75 0 0 0 1 0 0 0 244 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 128 0 0 0 0 130 108 130 114 32 130 111 131 83 131 86 131 98 131 78 0 118 0 97 118 0 23 152 77 58 69 151 37 175 72 26 19
+NonclientMetrics=84 1 0 0 1 0 0 0 16 0 0 0 16 0 0 0 18 0 0 0 18 0 0 0 244 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 188 2 0 0 0 0 0 128 0 0 0 0 130 108 130 114 32 130 111 131 83 131 86 131 98 131 78 0 109 111 110 92 80 111 107 101 109 111 110 46 84 104 101 109 15 0 0 0 15 0 0 0 244 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 128 0 0 0 0 130 108 130 114 32 130 111 131 83 131 86 131 98 131 78 0 109 111 110 92 80 111 107 101 109 111 110 46 84 104 101 109 18 0 0 0 18 0 0 0 244 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 128 0 0 0 0 130 108 130 114 32 130 111 131 83 131 86 131 98 131 78 0 109 111 110 92 80 111 107 101 109 111 110 46 84 104 101 109 244 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 128 0 0 0 0 130 108 130 114 32 130 111 131 83 131 86 131 98 131 78 0 109 111 110 92 80 111 107 101 109 111 110 46 84 104 101 109 244 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 128 0 0 0 0 130 108 130 114 32 130 111 131 83 131 86 131 98 131 78 0 109 111 110 92 80 111 107 101 109 111 110 46 84 104 101 109
+
+[Control Panel\Colors]
+ActiveTitle=255 0 0
+Background=0 0 0
+Hilight=255 255 0
+HilightText=0 0 0
+TitleText=200 208 208
+Window=255 255 255
+WindowText=0 0 0
+Scrollbar=200 208 208
+InactiveTitle=0 40 112
+Menu=144 152 160
+WindowFrame=0 0 0
+MenuText=0 0 0
+ActiveBorder=144 152 160
+InactiveBorder=144 152 160
+AppWorkspace=92 101 109
+ButtonFace=144 152 160
+ButtonShadow=96 104 112
+GrayText=96 104 112
+ButtonText=0 0 0
+InactiveTitleText=200 200 208
+ButtonHilight=200 208 208
+ButtonDkShadow=0 0 0
+ButtonLight=144 152 160
+InfoText=0 0 0
+InfoWindow=240 208 48
+GradientActiveTitle=255 255 0
+GradientInactiveTitle=0 172 0
+
+[boot]
+SCRNSAVE.EXE=
+
+[MasterThemeSelector]
+MTSM=DABJDKT
+
+[Software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_My Computor.ico,0
+
+[Software\Classes\CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\DefaultIcon]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_Network Neighborhood.ico,0
+
+[Software\Classes\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon]
+full=%ThemeDir%Pokemon\Pokemon_bin full.ico,0
+empty=%ThemeDir%Pokemon\Pokemon_bin empty.ico,0
+
+[Software\Classes\CLSID\{450D8FBA-AD25-11D0-98A8-0800361B1103}\DefaultIcon]
+DefaultValue=%ThemeDir%Pokemon\Pokemon_My Documents.ico,0
+
+[AppEvents\Schemes\Apps\.Default\MailBeep\.Current]
+DefaultValue=
+
+[WebView]
+WVLEFT.BMP=%ThemeDir%Pokemon\Pokemon WVLEFT.BMP
+WVLINE.GIF=%ThemeDir%Pokemon\Pokemon WVLINE.GIF
+WVLOGO.GIF=%ThemeDir%Pokemon\Pokemon WVLOGO.GIF

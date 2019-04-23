@@ -1,0 +1,537 @@
+# -*- coding: UTF-8 -*-
+import rdexcel
+import requests
+import json
+import weblogin
+import  MySQLdb
+import getsql
+import api
+import sys
+
+default_encoding = 'utf-8'
+if sys.getdefaultencoding() != default_encoding:
+    reload(sys)
+    sys.setdefaultencoding(default_encoding)
+class ZhuHangSongShen():
+    @classmethod
+    def ZhuHangSongShen(self):
+        token = weblogin.gettoken.token()
+        taskId1 = getsql.sql.getsqldata()[1]
+        a = rdexcel.readexcel()
+        listdata1 = a.excel_table_byindex("add1.xlsx", 0, 0)
+        # print(taskId1)
+        for i in range(0, len(taskId1)):
+            taskId = taskId1[i]
+            headers = api.API.SetHeaders()
+            payload1 = {
+                "data": {
+                    "moduleCode": "deliverAudit",
+                    "taskId": taskId
+                },
+                "ext": "string",
+                "header": {
+                    "app": "string",
+                    "gps": "string",
+                    "os": "string",
+                    "token": token,
+                    "ver": "string"
+                }
+            }
+            url3 = api.API.SetUrl() + "work/receiveTask"
+            data = json.dumps(payload1)
+            response = requests.request("POST", url3, data=data, headers=headers)
+            response.text1 = json.loads(response.text)
+            customer = getsql.sql.GetName()[i]
+            print ("主贷人:" + customer + "  驻行送审领取:" + response.text1["header"]["msg"][0])
+            payload2={
+	"data": {
+		"custName": listdata1[i]['loanerName'],
+		"custIdcard":  listdata1[i]['loanerCardId'],
+		"custMobile": "18583266667",
+		"salesmanName": "向进去/黄涛",
+		"custMarriage": "1",
+		"custNation": "汉族",
+		"custRegister": "成都",
+		"systemType": "1",
+		"ccSystemType": "",
+		"auditWay": "未知",
+		"financeCost": 1222,
+		"provinceCode": 110000,
+		"areaGroup": "",
+		"carLicenseLocationProvinceCode": 120000,
+		"riskAssessment": "",
+		"carModel": "AC Schnitzer/AC Schnitzer X6/2011款 ACS6 35i",
+		"loanAmount": 22222,
+		"driverLicenseFlag": "",
+		"replaceBuyFlag": "",
+		"assessorAmount": 0.1999,
+		"loanYear": "1",
+		"loanRate": 22,
+		"premium": 22,
+		"otherCost": 22222,
+		"gpsCost": 22222,
+		"gpsQuantity": 2222,
+		"payeeName": "测试收款人",
+		"payeePhone": "18583255555",
+		"payeeBankAmount": "12312312414",
+		"payeeOpenBank": "23123123123",
+		"insuranceCompany": "123123123",
+		"otherContacts": None,
+		"carType": "0",
+		"carAuto": "",
+		"carCapacity": None,
+		"carMileage": None,
+		"carColor": None,
+		"carAge": "一年以下",
+		"carSkylight": None,
+		"carConfig": None,
+		"environment": "国1",
+		"carDealer": "21313",
+		"aaa": [8, 131],
+		"vin": "123213123123",
+		"regdate": "2018-06",
+		"price": 0,
+		"gearBox": "自动",
+		"yearCheckDate": "2018-07",
+		"buessCheckDate": "2018-08",
+		"strongRiskDate": "2018-09",
+		"sgNo": None,
+		"reportNo": None,
+		"appraisalTime": None,
+		"carVin": None,
+		"rebate": None,
+		"actualPay": None,
+		"payerName": None,
+		"loanTime": None,
+		"address": None,
+		"email": None,
+		"mortgageArea": None,
+		"other": None,
+		"handleCardStatus": None,
+		"transferName": "",
+		"hasCarNum": "",
+		"transcribeCarModel": None,
+		"exCustName": None,
+		"exCustIdcard": None,
+		"exCustPhone": None,
+		"exRelation": None,
+		"autohomeid": "157907",
+		"carRegisterDate": "2011-10-31",
+		"terminalId": None,
+		"loanRemark": None,
+		"indoorAuditOpinion": "测试审核备注12312321#!@#@!!@#@!#\nASDASDASD",
+		"exAuditOpinion": None,
+		"auditOpinion": "恶趣味群翁请问请问\n奥术大师大所大所多\n@！#！@#@！#\n23qeqwe",
+		"supplementOpinion": None,
+		"sendBankRemark": None,
+		"subBankPassTime": "2018-07-18",
+		"returnedMoneyDate": "2018-07-18",
+		"cardBackTime": "2018-07-18",
+		"bankBackTime": "2018-07-18",
+		"cardNo": "12312414124535",
+		"province": 8,
+		"city": 131,
+		"taskId": taskId,
+		"completed": "true",
+		"push": "false",
+		"auditAdvanceMaterial": None,
+		"auditMaterial": None,
+		"auditQualificationMaterial": None,
+		"deliverAuditPaperMaterial": [{
+			"code": "CCF",
+			"name": "信用卡申请表",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 160,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "IDC",
+			"name": "身份证复印件",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 170,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "GLC",
+			"name": "担保承诺函",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 180,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "CIM",
+			"name": "车图",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": -1,
+			"urlList": None,
+			"serialNum": 190,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "BSR",
+			"name": "业务调查报告",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 200,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "CCIA",
+			"name": "信用卡分期业务申请书",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 210,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "SD",
+			"name": "单身具结书或结婚证",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 220,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "PLOC",
+			"name": "共偿人承诺书(个人)",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 230,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "COI",
+			"name": "收入证明或收入申明",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 240,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "CPC",
+			"name": "购车合同",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 250,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "LOG",
+			"name": "担保函",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 260,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "CLOC",
+			"name": "共偿人承诺书(公司)",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 270,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "BN",
+			"name": "业务告知书",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 280,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "CCA",
+			"name": "代领卡授权书",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 290,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "MC",
+			"name": "抵押合同3份",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 300,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "ALOA",
+			"name": "授权委托书",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 330,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "HVPI",
+			"name": "家访照片(室内2张,室外2张)",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 630,
+			"linkType": 1,
+			"updateFlag": None,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "AES",
+			"name": "征信报告简版",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 640,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "EA",
+			"name": "审批单",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 660,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "EQRB",
+			"name": "委托查询征信书",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 690,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "RP",
+			"name": "收据复印件",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 700,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "AR",
+			"name": "评估报告",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 710,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}],
+		"deliverAuditQualificationMaterial": [{
+			"code": "CPCH",
+			"name": "商品房购房合同",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 410,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "CPT",
+			"name": "商品房产调",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 420,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "SBHC",
+			"name": "自建房房屋证明",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 430,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "BF",
+			"name": "银行流水",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 440,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "BL",
+			"name": "营业执照",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 450,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "SWP",
+			"name": "特殊工作工作证",
+			"meterialType": 1,
+			"enableFlag": 0,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 460,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}, {
+			"code": "CHPRC",
+			"name": "商品房产权证",
+			"meterialType": 1,
+			"enableFlag": None,
+			"remark": None,
+			"existFlag": 0,
+			"urlList": None,
+			"serialNum": 680,
+			"linkType": 1,
+			"updateFlag": 0,
+			"optionalFlag": 0,
+			"urlListCode": None
+		}],
+		"cityCode": 110100,
+		"countryCode": 110102,
+		"carLicenseLocationCityCode": 120100
+	},
+	"header": {
+		"app": " ",
+		"gps": " ",
+		"os": " ",
+		"ver": " ",
+		"token":token
+	}
+}
+            url4 = api.API.SetUrl() + "work/handle/deliverAudit"
+            data = json.dumps(payload2)
+            response = requests.request("POST", url4, data=data, headers=headers)
+            response.text1 = json.loads(response.text)
+            customer = getsql.sql.GetName()[i]
+            print ("主贷人:" + customer + "  驻行送审审核:" + response.text1["header"]["msg"][0])
+# a=ZhuHangSongShen.ZhuHangSongShen()

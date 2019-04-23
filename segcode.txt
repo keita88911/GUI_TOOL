@@ -1,0 +1,35 @@
+launchOrder("launchOrder", 1, "创建车贷申请", "业务部"),
+credit("credit", 2, "驻行查征信", true, true, "驻行部"),
+creditPrint("creditPrint", 11, "驻行征信打印", true, true, "驻行部"),
+fillPhoneAudit("fillPhoneAudit", 3, "补充电审资料", "业务部"),
+evaluateCar("evaluateCar", 4, "真实车价评估", true, false, "评估部"),
+audit("audit", 5, "初审", true, false, "审核部"),
+chargeAudit("chargeAudit", 6, "主管审核", true, true, "审核部"),
+managerAudit("managerAudit", 7, "经理审核", true, true, "管理层"),
+ahead("ahead", 8, "提额", "审核部"),
+areaManagerAudit("areaManagerAudit", 9, "大区经理审核", "管理层"),
+generalManagerAudit("generalManagerAudit", 10, "总经理审核", true, true, "管理成"),
+
+confirmInfo("confirmInfo", 21, "车图GPS", true, false, "审核部"),
+confirmPaper("confirmPaper", 22, "纸质资料确认", "资料部"),
+assessmentReport("assessmentReport", 23, "车辆评估报告", true, false, "评估部"),
+
+openBank("openBank", 50, "开卡", "开卡部"),
+deliverAudit("deliverAudit", 51, "驻行送审", true, false, "驻行部"),
+recordCard("recordCard", 52, "开卡信息录入", "开卡部"),
+recordBalance("recordBalance", 53, "财务放款信息录入", "财务部"),
+
+changeTicket("changeTicket", 55, "审核员改签", false, false, "审核部"),
+
+addFinanceInfo("addFinanceInfo", 60, "添加财务信息", true, false, "审核部"),
+auditFinance("auditFinance", 61, "财务审核", true, true, "财务部"),
+cashierAdvance("cashierAdvance", 62, "出纳垫款", true, true, "财务部"),
+
+transcribeOrder("transcribeOrder", 30, "抄单", true, false, "抄单部"),
+transcribeOrderOfInsider("transcribeOrderOfInsider", 31, "抄单内勤", "抄单部"),
+
+fillAfterCredit("fillAfterCredit", 12, "征信后补充资料", "业务部"),
+fillAfterAudit("fillAfrerAudit", 20, "审核后补充资料", "业务部"),
+fillAfterFinish("fillAfterFinish", 70, "完成后补充资料", "业务部"),
+paymentTaskPool("paymentTaskPool",63,"待回款任务池","财务部"),
+fillAssessReport("fillAssessReport",66,"车辆评估报告补充资料","评估部");

@@ -1,0 +1,52 @@
+                          POKEMON THEME
+                          *************
+                   for Win95/98 and PLUS! pack.
+                   *************************
+
+                             Ver.1.5    Sep.23,1998
+
+    Dedicate to Famous GAMEBOY Character Pocket Monster(Pokemon).
+    =============================================================
+
+Created by Takao Yasuda (t-yasuda@interlink.or.jp)
+----------------------------------------------------------------------
+WELCOME TO POKEMON Desktop Theme for Microsoft(R) Plus! for Windows95/98.
+
+All Icons, Sounds and Wallpaper are created by me.
+Some Cursors were found at numerous sites on the WEB.
+
+I really appreciate their assistance which Original CG by "HIMEHAJIME" for my Wallpaper and Gamefreak.
+These files may of course be distributed freely, as long as no modifications
+are made, and no money is charged for them, ever.
+-----------------------------------------------------------------------
+Ver.1.0  1st issue
+Ver.1.1  added ico file
+Ver.1.2  updated Cursor and add icons
+Ver.1.3  add icons
+Ver.1.4  add icons and updated wallpaper
+Ver.1.5  Add icons, Cursors, Updated Wallpaper and meet Win98
+	 *Pokemon Busy.ani are made by Norio Asakawa.
+
+INSTALLATION INSTRUCTIONS;
+
+1.  Unzip the archive file using a 32 bit archive tool such as WinZip(http://www.winzip.com)
+    capable of handling long file names. It is IMPORTANT.
+    Extract the file into a temporary directory.
+
+2.  After extract the files, Move Pokemon Theme.theme file to your Plus Theme Directory
+    (usually C:\Program Files\PLUS!\Themes).
+
+3.  Move the remainder of the files to a new directory(folder)such as "Pokemon" that
+    you create below your plus! themes directory to delete easy if you don't like this desktop theme.
+
+4.  Set-up via Control Panel \ Desktop Themes \ others \ : Choose Pokemon Themes.
+
+These is no Screen Saver included.
+
+This theme needs to be in High-Color!!
+======================================
+
+Thank you very much to download "Pokemon" Desktop Theme and hope to Enjoy this Theme!!
+If you have any comments or If you are interested in other my created desktop themes,
+Please E-Mail me. (t-yasuda@interlink.or.jp)
+I am also openning my homepage "YASU no HEYA" on the WEB(www://home.interlink.or.jp/~t-yasuda/) with some desktop themes.
